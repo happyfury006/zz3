@@ -5,7 +5,7 @@
 #include <typeinfo>
 
 #include <algebrique.hpp>
-// #include <ensemble.hpp>
+#include <ensemble.hpp>
 #include <polaire.hpp>
 
 // #1 --------------------------------------------------------------------------
@@ -284,7 +284,7 @@ TEST_CASE("TP1_Complexe::ConversionVersPolaire_V2") {
 } 
 
 // #20-23 ----------------------------------------------------------------------
-/* double re[] = {3, 7, 13, 27};
+double re[] = {3, 7, 13, 27};
 double im[] = {4, 8, 16, 32};
 
 Algebrique z1(re[0], im[0]);
@@ -292,18 +292,18 @@ Algebrique z2(re[1], im[1]);
 Algebrique z3(re[2], im[2]);
 Algebrique z4(re[3], im[3]);
 
-Ensemble ens; */
+Ensemble ens;
 
 // #20 -------------------------------------------------------------------------
-/* TEST_CASE("TP1_Ensemble::MoyenneVide") {
+TEST_CASE("TP1_Ensemble::MoyenneVide") {
   Algebrique b = moyenne(ens);
 
   REQUIRE(b.getRe() == 0);
   REQUIRE(b.getIm() == 0);
-} */
+}
 
 // #21 -------------------------------------------------------------------------
-/* TEST_CASE("TP1_Ensemble::Moyenne") {
+TEST_CASE("TP1_Ensemble::Moyenne") {
   ens.ajouter(z1);
   ens.ajouter(z2);
   ens.ajouter(z3);
@@ -313,22 +313,22 @@ Ensemble ens; */
 
   REQUIRE(b.getRe() == Catch::Approx((re[0] + re[1] + re[2] + re[3]) / 4));
   REQUIRE(b.getIm() == Catch::Approx((im[0] + im[1] + im[2] + im[3]) / 4));
-} */
+}
 
 // #22 -------------------------------------------------------------------------
-/* TEST_CASE("TP1_Ensemble::MoyenneAlgebrique") {
+TEST_CASE("TP1_Ensemble::MoyenneAlgebrique") {
   Algebrique b = MoyenneAlgebrique()(ens);
 
   REQUIRE(b.getRe() == Catch::Approx((re[0] + re[1] + re[2] + re[3]) / 4));
   REQUIRE(b.getIm() == Catch::Approx((im[0] + im[1] + im[2] + im[3]) / 4));
-} */
+}
 
 // #23 -------------------------------------------------------------------------
-/* TEST_CASE("TP1_Ensemble::MoyennePolaire") {
+TEST_CASE("TP1_Ensemble::MoyennePolaire") {
   Polaire p(Algebrique((re[0] + re[1] + re[2] + re[3]) / 4,
                        (im[0] + im[1] + im[2] + im[3]) / 4));
   Polaire b = MoyennePolaire()(ens);
 
   REQUIRE(b.getArg() == Catch::Approx(p.getArg()));
   REQUIRE(b.getMod() == Catch::Approx(p.getMod()));
-} */
+}

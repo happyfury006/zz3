@@ -3,24 +3,24 @@
 
 #include "complexe.hpp"
 
-class Algebrique;
+class Algebrique;  // déclaration anticipée
 
+class Polaire : public Complexe {
+  double mod;
+  double arg;  // en radians
 
-class Polaire: public Complexe{
-    private:
-        double mod;
-        double arg;
-    public:
-        Polaire();
-        Polaire(const double nvmod, const double nvarg);
-        Polaire(const Algebrique& );
-        virtual void afficher(std::stringstream &str) const override;
-        double getArg() const;
-        double getMod() const;
-        void setArg(const double nvArg);
-        void setMod(const double nvMod);
-        virtual Algebrique versAlgebrique() const override;
-        ~Polaire();
+public:
+  Polaire(double mod = 0.0, double arg = 0.0);
+  Polaire(const Algebrique &a);
+
+  double getMod() const;
+  double getArg() const;
+  void setMod(double m);
+  void setArg(double a);
+
+  void afficher(std::ostream &os) const override;
+  Algebrique versAlgebrique() const override;
+  Polaire *clone() const override;
 };
 
 #endif

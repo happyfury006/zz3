@@ -250,27 +250,8 @@ CMakeFiles/ex1_complexe.dir/ex1_complexe/test/tp1_complexe_test.cpp.o: \
  /home/local.isima.fr/jusometgar/Bureau/zz3/cpp/tp_1/dependencies/catch2-src/src/catch2/../catch2/internal/catch_preprocessor_remove_parens.hpp \
  /home/local.isima.fr/jusometgar/Bureau/zz3/cpp/tp_1/ex1_complexe/src/algebrique.hpp \
  /home/local.isima.fr/jusometgar/Bureau/zz3/cpp/tp_1/ex1_complexe/src/complexe.hpp \
- /usr/include/c++/14/iostream /usr/include/c++/14/cmath \
- /usr/include/math.h /usr/include/x86_64-linux-gnu/bits/math-vector.h \
- /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
- /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
- /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
- /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
- /usr/include/x86_64-linux-gnu/bits/mathcalls-macros.h \
- /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
- /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
- /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
- /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
- /usr/include/c++/14/bits/specfun.h /usr/include/c++/14/tr1/gamma.tcc \
- /usr/include/c++/14/tr1/special_function_util.h \
- /usr/include/c++/14/tr1/bessel_function.tcc \
- /usr/include/c++/14/tr1/beta_function.tcc \
- /usr/include/c++/14/tr1/ell_integral.tcc \
- /usr/include/c++/14/tr1/exp_integral.tcc \
- /usr/include/c++/14/tr1/hypergeometric.tcc \
- /usr/include/c++/14/tr1/legendre_function.tcc \
- /usr/include/c++/14/tr1/modified_bessel_func.tcc \
- /usr/include/c++/14/tr1/poly_hermite.tcc \
- /usr/include/c++/14/tr1/poly_laguerre.tcc \
- /usr/include/c++/14/tr1/riemann_zeta.tcc \
+ /usr/include/c++/14/iostream \
+ /home/local.isima.fr/jusometgar/Bureau/zz3/cpp/tp_1/ex1_complexe/src/ensemble.hpp \
+ /home/local.isima.fr/jusometgar/Bureau/zz3/cpp/tp_1/ex1_complexe/src/algebrique.hpp \
+ /home/local.isima.fr/jusometgar/Bureau/zz3/cpp/tp_1/ex1_complexe/src/polaire.hpp \
  /home/local.isima.fr/jusometgar/Bureau/zz3/cpp/tp_1/ex1_complexe/src/polaire.hpp

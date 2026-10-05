@@ -1,36 +1,23 @@
 #include "algebrique.hpp"
 #include "polaire.hpp"
-Algebrique::Algebrique():re(0), im(0){}
 
-Algebrique::Algebrique(const double nvRe,const double nvIm): re(nvRe),im(nvIm){
+#include <cmath>
 
-}
-Algebrique::Algebrique(const Polaire& p)
-    : re(std::cos(p.getArg()) * p.getMod()),
-      im(std::sin(p.getArg()) * p.getMod()) {}
+Algebrique::Algebrique(double r, double i) : re(r), im(i) {}
 
-double Algebrique::getRe() const {
-    return re;
-}
+Algebrique::Algebrique(const Polaire &p)
+    : re(p.getMod() * std::cos(p.getArg())),
+      im(p.getMod() * std::sin(p.getArg())) {}
 
-double Algebrique::getIm() const {
-    return im;
-}
-void Algebrique::setRe(const double nvRe) {
-    re =nvRe;
+double Algebrique::getRe() const { return re; }
+double Algebrique::getIm() const { return im; }
+void Algebrique::setRe(double r) { re = r; }
+void Algebrique::setIm(double i) { im = i; }
+
+void Algebrique::afficher(std::ostream &os) const {
+  os << "(re=" << re << ";im=" << im << ")";
 }
 
-void Algebrique::setIm(const double nvIm) {
-    im=nvIm;
-}
+Algebrique Algebrique::versAlgebrique() const { return *this; }
 
-void Algebrique::afficher(std::stringstream &str) const {
-    str << "(re=" << re << ";im=" << im << ")";
-}
-Algebrique Algebrique::versAlgebrique() const {
-    return *this;
-}
-
-Algebrique::~Algebrique(){
-
-}
+Algebrique *Algebrique::clone() const { return new Algebrique(*this); }

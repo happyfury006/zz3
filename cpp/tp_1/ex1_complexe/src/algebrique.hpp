@@ -2,23 +2,25 @@
 #define ALGEBRIQUE_HPP
 
 #include "complexe.hpp"
-class Polaire;
+
+class Polaire;  // déclaration anticipée
 
 class Algebrique : public Complexe {
-    private:
-        double re;
-        double im;
-    public:
-        Algebrique();
-        Algebrique(const double nvre, const double nvim);
-        Algebrique(const Polaire& );
-        double getRe() const;
-        double getIm() const;
-        void setRe(const double nvRe);
-        void setIm(const double nvIm);
-        virtual void afficher(std::stringstream &str) const override;
-        virtual Algebrique versAlgebrique() const override;
-        ~Algebrique();
+  double re;
+  double im;
 
+public:
+  Algebrique(double re = 0.0, double im = 0.0);
+  Algebrique(const Polaire &p);
+
+  double getRe() const;
+  double getIm() const;
+  void setRe(double r);
+  void setIm(double i);
+
+  void afficher(std::ostream &os) const override;
+  Algebrique versAlgebrique() const override;
+  Algebrique *clone() const override;
 };
+
 #endif
