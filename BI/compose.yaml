@@ -1,0 +1,31 @@
+services:
+  talaxie:
+    image: registry.isima.fr/td_talaxie/talaxie:dev
+    container_name: talaxie
+    volumes:
+      - .:/mnt:rw
+    environment:
+      - DISPLAY=:99
+      - _JAVA_OPTIONS=--add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED
+    ports:
+      - 6080:6080   # VNC (Visual)
+    entrypoint: ["bash", "/opt/talaxie/start.sh"]
+    command: ["/opt/talaxie/TOS/launcher"]
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:latest
+    container_name: talaxie-pg
+    environment:
+      - POSTGRES_USER=etudiant
+      - POSTGRES_PASSWORD=isima
+      - POSTGRES_DB=postgres_db
+    ports:
+      - 5432:5432
+
+  adminer:
+    image: adminer
+    container_name: adminer
+    ports:
+      - 8080:8080
