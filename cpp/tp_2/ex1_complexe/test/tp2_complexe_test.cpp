@@ -4,9 +4,9 @@
 #include <limits>
 #include <vector>
 
-// #include <algebrique.hpp>
-// #include <ensemble.hpp>
-// #include <polaire.hpp>
+#include <algebrique.hpp>
+#include <ensemble.hpp>
+#include <polaire.hpp>
 
 // #0 --------------------------------------------------------------------------
 /* TEST_CASE("TP2_Polaire::setArg") {

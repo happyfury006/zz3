@@ -30,7 +30,7 @@ set(headers_ex1
   ex1_complexe/src/complexe.hpp
   ex1_complexe/src/algebrique.hpp
   ex1_complexe/src/polaire.hpp
-  # ex1_complexe/src/ensemble.hpp
+  ex1_complexe/src/ensemble.hpp
 )
 #----------------------------------------
 
